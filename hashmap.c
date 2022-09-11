@@ -80,15 +80,15 @@ Pair * searchMap(HashMap * map,  char * key) {
   unsigned int i = hash(key, map->capacity);
 
   while(map->buckets[i] != NULL)
-  {
-    if( is_equal(map->buckets[i]->key, key) )
-    {
-      map->current = i;
-      return(map->buckets[i]->value);
-    }
-    i++;
-    i %= map->capacity;
-  }
+	{
+		if(is_equal(map->buckets[i]->key, key)) 
+		{
+			map->current = i;
+			return map->buckets[i]->value;
+		}
+		i++;
+		i %= map->capacity;
+	}
 
     return NULL;
 }
