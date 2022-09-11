@@ -101,7 +101,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
-	insigned long i = map->current + 1;
+	unsigned long i = map->current + 1;
 
 	while(map->buckets[i] == NULL)
 	{
