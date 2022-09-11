@@ -2,3 +2,26 @@ Sat 10 Sep 2022 06:28:59 PM UTC:
  tests:  0|6
 total_score: 0/70
 97b1497
+Sun 11 Sep 2022 10:11:29 PM UTC: 
+ hashmap.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:55:20: error: ‘Hashmap’ undeclared (first use in this function); did you mean ‘HashMap’?
+   55 |   HashMap * map = (Hashmap *)malloc(sizeof(HasMap));
+      |                    ^~~~~~~
+      |                    HashMap
+hashmap.c:55:20: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:55:29: error: expected expression before ‘)’ token
+   55 |   HashMap * map = (Hashmap *)malloc(sizeof(HasMap));
+      |                             ^
+hashmap.c:61:12: error: ‘mapa’ undeclared (first use in this function); did you mean ‘map’?
+   61 |     return mapa;
+      |            ^~~~
+      |            map
+hashmap.c:62:1: error: control reaches end of non-void function [-Werror=return-type]
+   62 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+b555ae1
