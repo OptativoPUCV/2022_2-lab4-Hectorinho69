@@ -103,3 +103,20 @@ Sun 11 Sep 2022 11:34:54 PM UTC:
  tests:  5|4
 total_score: 30/70
 44fcd6b
+Sun 11 Sep 2022 11:35:05 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:82:21: error: array subscript has type ‘char’ [-Werror=char-subscripts]
+   82 |   while(map->buckets[i] != NULL)
+      |                     ^
+hashmap.c:84:30: error: array subscript has type ‘char’ [-Werror=char-subscripts]
+   84 |     if( is_equal(map->buckets[i]->key, key) )
+      |                              ^
+hashmap.c:87:26: error: array subscript has type ‘char’ [-Werror=char-subscripts]
+   87 |       return(map->buckets[i]->value);
+      |                          ^
+cc1: all warnings being treated as errors
+Compilation failed
+5a6eef8
