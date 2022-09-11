@@ -154,3 +154,14 @@ hashmap.c:35:32: note: expected ‘void *’ but argument is of type ‘int’
 cc1: all warnings being treated as errors
 Compilation failed
 447c97e
+Sun 11 Sep 2022 11:50:00 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:86:50: error: ‘false’ undeclared (first use in this function)
+   86 |           (is_equal(map->buckets[i]->key, key == false))
+      |                                                  ^~~~~
+hashmap.c:86:50: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+cdcb0f1
