@@ -120,3 +120,9 @@ hashmap.c:87:26: error: array subscript has type ‘char’ [-Werror=char-subscr
 cc1: all warnings being treated as errors
 Compilation failed
 5a6eef8
+Sun 11 Sep 2022 11:35:18 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  5|4
+total_score: 30/70
+697c468
