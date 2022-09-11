@@ -72,7 +72,28 @@ HashMap * createMap(long capacity) {
 }
 
 void eraseMap(HashMap * map,  char * key) {    
+  unsigned long i = hash(key, map->capacity);
 
+  if(is_equal(map->buckets[i]->key, key))
+  {
+    map->size+=-1;
+    map->buckets[i]->key = NULL;
+  }
+  else
+  {
+    while( (map->buckets[i] != NULL)
+                &&
+          (is_equal(map->buckets[i]->key, key == 0))
+          )
+    {
+      if(is_equal(map->buckets[i]->key, key))
+      {
+        map->size +=-1;
+        map->buckets[i]->key = NULL;
+      }
+      i %= map->capacity;
+    }
+  }
 
 }
 

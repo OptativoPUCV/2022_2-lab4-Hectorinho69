@@ -138,3 +138,19 @@ Sun 11 Sep 2022 11:40:25 PM UTC:
  tests:  5|4
 total_score: 30/70
 64a6cdd
+Sun 11 Sep 2022 11:49:38 PM UTC: 
+ hashmap.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:86:47: error: passing argument 2 of ‘is_equal’ makes pointer from integer without a cast [-Werror=int-conversion]
+   86 |           (is_equal(map->buckets[i]->key, key == 0))
+      |                                           ~~~~^~~~
+      |                                               |
+      |                                               int
+hashmap.c:35:32: note: expected ‘void *’ but argument is of type ‘int’
+   35 | int is_equal(void* key1, void* key2){
+      |                          ~~~~~~^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+447c97e
