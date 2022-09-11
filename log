@@ -25,3 +25,23 @@ hashmap.c:62:1: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 b555ae1
+Sun 11 Sep 2022 10:11:41 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:55:44: error: ‘HasMap’ undeclared (first use in this function); did you mean ‘HashMap’?
+   55 |   HashMap * map = (HashMap *)malloc(sizeof(HasMap));
+      |                                            ^~~~~~
+      |                                            HashMap
+hashmap.c:55:44: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:61:12: error: ‘mapa’ undeclared (first use in this function); did you mean ‘map’?
+   61 |     return mapa;
+      |            ^~~~
+      |            map
+hashmap.c:62:1: error: control reaches end of non-void function [-Werror=return-type]
+   62 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+1dc7f88
