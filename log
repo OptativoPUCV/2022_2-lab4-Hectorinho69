@@ -174,3 +174,25 @@ Sun 11 Sep 2022 11:51:51 PM UTC:
  tests:  6|4
 total_score: 30/70
 2567dc4
+Sun 11 Sep 2022 11:52:49 PM UTC: 
+ hashmap.c | 12 +++++++++++-
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:104:2: error: ‘insigned’ undeclared (first use in this function)
+  104 |  insigned long i = map->current + 1;
+      |  ^~~~~~~~
+hashmap.c:104:2: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:104:10: error: expected ‘;’ before ‘long’
+  104 |  insigned long i = map->current + 1;
+      |          ^~~~~
+      |          ;
+hashmap.c:106:21: error: ‘i’ undeclared (first use in this function)
+  106 |  while(map->buckets[i] == NULL)
+      |                     ^
+hashmap.c:116:1: error: control reaches end of non-void function [-Werror=return-type]
+  116 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+917e724

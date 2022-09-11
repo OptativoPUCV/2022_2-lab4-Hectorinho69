@@ -101,8 +101,18 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
+	insigned long i = map->current + 1;
 
-    return NULL;
+	while(map->buckets[i] == NULL)
+	{
+		i++;
+		i %= map->capacity;
+	}
+
+	if(map->buckets[0]->key != NULL) i = 0;
+
+	map->current = i;
+	return map->buckets[i]->value;
 }
 
 Pair * nextMap(HashMap * map) {
